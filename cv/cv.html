@@ -1,0 +1,454 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Irene Cuesta — CV</title>
+<meta name="author" content="Irene Cuesta Martínez">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,400;0,500;0,600;0,700;1,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  /* Misma identidad que el portfolio (01-minimal/styles.css) */
+  :root {
+    --bg: #ffffff;
+    --bg-2: #f6f6f6;
+    --line: #e6e6e6;
+    --muted: #767676;
+    --fg-2: #3d3d3d;
+    --fg: #111111;
+    --accent: #f26419;
+    --accent-ink: #b8430a;
+    --accent-soft: #ffe6d6;
+    --contrast: #0e70aa;
+    --font-sans: "Inter Tight", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    --font-mono: "JetBrains Mono", ui-monospace, Menlo, Consolas, monospace;
+  }
+
+  @page { size: A4; margin: 0; }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; background: #d9d9d9; }
+  body {
+    font-family: var(--font-sans);
+    color: var(--fg);
+    font-size: 8.4pt;
+    line-height: 1.38;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+  a { color: inherit; text-decoration: none; }
+  ul { margin: 0; padding: 0; list-style: none; }
+  h1, h2, h3, p { margin: 0; }
+
+  .page {
+    width: 210mm;
+    height: 297mm;
+    margin: 0 auto;
+    background: var(--bg);
+    position: relative;
+    overflow: hidden;
+    padding: 13mm 14mm 11mm;
+    display: flex;
+    flex-direction: column;
+  }
+  .page::before { /* filete naranja superior */
+    content: "";
+    position: absolute;
+    inset: 0 0 auto 0;
+    height: 3.2mm;
+    background: var(--accent);
+  }
+
+  /* ---------- Cabecera ---------- */
+  .head {
+    display: grid;
+    grid-template-columns: 1fr 30mm;
+    gap: 10mm;
+    align-items: end;
+  }
+  .name {
+    font-size: 35pt;
+    font-weight: 600;
+    letter-spacing: -0.035em;
+    line-height: 0.95;
+  }
+  .name .dot { color: var(--accent); }
+  .role {
+    margin-top: 2.6mm;
+    font-size: 13pt;
+    font-weight: 500;
+    letter-spacing: -0.01em;
+    color: var(--fg-2);
+  }
+  .tags {
+    margin-top: 2.2mm;
+    font-family: var(--font-mono);
+    font-size: 7.4pt;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--accent-ink);
+  }
+  .tags span + span::before { content: " · "; color: var(--muted); }
+
+  .contact {
+    margin-top: 4.5mm;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.6mm 5mm;
+    font-size: 8pt;
+    color: var(--fg-2);
+  }
+  .contact li { display: flex; align-items: center; gap: 1.6mm; }
+  .contact svg { width: 3.3mm; height: 3.3mm; color: var(--contrast); flex: none; }
+  .contact a:hover { color: var(--contrast); }
+
+  .photo {
+    width: 30mm;
+    height: 36mm;
+    border-radius: 2.5mm;
+    object-fit: cover;
+    object-position: 50% 30%;
+    display: block;
+  }
+
+  /* ---------- Perfil + cifras ---------- */
+  .intro {
+    margin-top: 5.5mm;
+    padding-top: 4.2mm;
+    border-top: 0.3mm solid var(--fg);
+    display: grid;
+    grid-template-columns: 1fr 64mm;
+    gap: 9mm;
+    align-items: start;
+  }
+  .summary { font-size: 9.2pt; line-height: 1.45; color: var(--fg-2); }
+  .summary strong { color: var(--fg); font-weight: 600; }
+
+  .kpis { display: grid; grid-template-columns: repeat(3, 1fr); gap: 3mm; }
+  .kpi { border-top: 0.6mm solid var(--accent); padding-top: 1.8mm; }
+  .kpi b {
+    display: block;
+    font-size: 17pt;
+    font-weight: 600;
+    letter-spacing: -0.03em;
+    line-height: 1;
+    color: var(--accent-ink);
+  }
+  .kpi span { display: block; margin-top: 1.2mm; font-size: 7pt; line-height: 1.3; color: var(--muted); }
+
+  /* ---------- Cuerpo a dos columnas ---------- */
+  .body {
+    margin-top: 5.5mm;
+    display: grid;
+    grid-template-columns: 1fr 54mm;
+    gap: 9mm;
+    flex: 1;
+  }
+  .side { border-left: 0.25mm solid var(--line); padding-left: 7mm; margin-left: -2mm; }
+
+  .sec + .sec { margin-top: 5.2mm; }
+  .sec-title {
+    display: flex;
+    align-items: baseline;
+    gap: 2mm;
+    font-family: var(--font-mono);
+    font-size: 7.6pt;
+    font-weight: 500;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--fg);
+    margin-bottom: 3mm;
+  }
+  .sec-title .n { color: var(--accent); }
+  .sec-title::after { content: ""; flex: 1; height: 0.25mm; background: var(--line); transform: translateY(-0.6mm); }
+
+  /* Experiencia / formación */
+  .item { break-inside: avoid; }
+  .item .top { display: flex; align-items: baseline; justify-content: space-between; gap: 4mm; }
+  .item + .item { margin-top: 3.4mm; }
+  .when {
+    font-family: var(--font-mono);
+    font-size: 7.2pt;
+    color: var(--muted);
+    white-space: nowrap;
+    flex: none;
+  }
+  .when .now { color: var(--contrast); }
+  .what h3 { font-size: 10pt; font-weight: 600; letter-spacing: -0.01em; line-height: 1.25; }
+  .org {
+    margin-top: 0.4mm;
+    font-family: var(--font-mono);
+    font-size: 7.3pt;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--accent-ink);
+  }
+  .org .place { color: var(--muted); letter-spacing: 0.02em; }
+  .bullets { margin-top: 1.2mm; }
+  .bullets li { padding-left: 3.4mm; color: var(--fg-2); background: linear-gradient(var(--accent), var(--accent)) 0 0.66em / 1.5mm 0.25mm no-repeat; }
+  .bullets li + li { margin-top: 0.4mm; }
+  .bullets strong { color: var(--fg); font-weight: 600; }
+
+  .subhead {
+    margin: 4mm 0 2.6mm;
+    font-family: var(--font-mono);
+    font-size: 7pt;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--muted);
+  }
+  .edu .what h3 { font-size: 9.4pt; }
+  .edu .what p { margin-top: 0.5mm; color: var(--fg-2); }
+  .edu .what p.org { color: var(--accent-ink); }
+
+  /* Columna lateral */
+  .skills li + li { margin-top: 2.6mm; }
+  .skills .lbl { display: block; font-size: 8.2pt; font-weight: 600; color: var(--fg); margin-bottom: 1.2mm; }
+  .chips { display: flex; flex-wrap: wrap; gap: 1.1mm; }
+  .chips span {
+    font-size: 7.6pt;
+    line-height: 1;
+    padding: 1.1mm 1.8mm 1.2mm;
+    border-radius: 1mm;
+    background: var(--accent-soft);
+    color: #5c2405;
+  }
+
+  .plain li { padding-left: 3.4mm; color: var(--fg-2); background: linear-gradient(var(--accent), var(--accent)) 0 0.66em / 1.5mm 0.25mm no-repeat; }
+  .plain li + li { margin-top: 1mm; }
+
+  .lang li + li { margin-top: 2mm; }
+  .lang b { font-weight: 600; }
+  .lang .lvl {
+    float: right;
+    font-family: var(--font-mono);
+    font-size: 7.2pt;
+    color: var(--accent-ink);
+  }
+  .lang p { clear: both; color: var(--muted); font-size: 7.8pt; margin-top: 0.3mm; }
+
+  .course b { display: block; font-weight: 600; }
+  .course p { color: var(--muted); font-size: 7.8pt; margin-top: 0.3mm; }
+
+  .portfolio {
+    margin-top: auto;
+    display: grid;
+    grid-template-columns: 15mm 1fr;
+    gap: 2.8mm;
+    align-items: center;
+    padding: 3.2mm;
+    border-radius: 2mm;
+    background: var(--bg-2);
+  }
+  .portfolio img { width: 15mm; height: 15mm; display: block; }
+  .portfolio b { display: block; font-size: 9pt; font-weight: 600; line-height: 1.2; }
+  .portfolio b::after { content: " →"; color: var(--accent); }
+  .portfolio span {
+    display: block;
+    margin-top: 0.8mm;
+    font-family: var(--font-mono);
+    font-size: 6pt;
+    line-height: 1.35;
+    color: var(--contrast);
+  }
+  .side { display: flex; flex-direction: column; }
+  .side .sec:last-of-type { margin-bottom: 6mm; }
+
+  @media print {
+    html, body { background: none; }
+    .page { margin: 0; }
+  }
+</style>
+</head>
+<body>
+<main class="page">
+
+  <header class="head">
+    <div>
+      <h1 class="name">Irene Cuesta<span class="dot">.</span></h1>
+      <p class="role">Especialista en Marketing Digital</p>
+      <p class="tags"><span>Social media</span><span>Meta Ads</span><span>SEO</span><span>Contenido</span></p>
+
+      <ul class="contact">
+        <li>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-7-6.1-7-11.5a7 7 0 0 1 14 0C19 14.9 12 21 12 21Z"/><circle cx="12" cy="9.5" r="2.5"/></svg>
+          Gijón, Asturias
+        </li>
+        <li>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 3h3l2 5-2.5 1.5a11 11 0 0 0 7 7L16 14l5 2v3a2 2 0 0 1-2 2A16 16 0 0 1 3 5a2 2 0 0 1 2-2Z"/></svg>
+          <a href="tel:+34653902516">+34 653 90 25 16</a>
+        </li>
+        <li>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3.5 6 8.5 7 8.5-7"/></svg>
+          <a href="mailto:irenecuestamartinez@gmail.com">irenecuestamartinez@gmail.com</a>
+        </li>
+        <li>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="3"/><path d="M8 10.5V16M8 7.5v.01M12 16v-5.5M12 13a2.5 2.5 0 0 1 5 0v3"/></svg>
+          <a href="https://www.linkedin.com/in/irenecuestamartinez/">linkedin.com/in/irenecuestamartinez</a>
+        </li>
+      </ul>
+    </div>
+    <img class="photo" src="foto-irene.png" alt="Retrato de Irene Cuesta">
+  </header>
+
+  <section class="intro" aria-label="Perfil">
+    <p class="summary">
+      Especialista en marketing digital con experiencia en <strong>estrategia de social media</strong>,
+      <strong>campañas de Meta Ads</strong>, <strong>SEO</strong> y marketing de contenidos. Combino
+      creatividad, análisis de datos y optimización de resultados. Mi objetivo es seguir creciendo en
+      <strong>performance marketing</strong> y formándome en inteligencia artificial y marketing de
+      contenidos dentro de entornos dinámicos.
+    </p>
+    <div class="kpis">
+      <div class="kpi"><b>+4.000</b><span>seguidores con redes y Meta Ads</span></div>
+      <div class="kpi"><b>+40 %</b><span>de alcance orgánico gracias al SEO</span></div>
+      <div class="kpi"><b>50+</b><span>cuentas de Meta gestionadas</span></div>
+    </div>
+  </section>
+
+  <div class="body">
+    <div class="main">
+
+      <section class="sec">
+        <h2 class="sec-title"><span class="n">01</span> Experiencia</h2>
+
+        <article class="item">
+          <div class="what">
+            <div class="top"><h3>Responsable de Marketing Digital</h3><p class="when">2024 — 2026</p></div>
+            <p class="org">JC Innovación</p>
+            <ul class="bullets">
+              <li>Creación y ejecución de la estrategia de marketing digital.</li>
+              <li>Gestión de redes sociales y campañas de Meta Ads: <strong>+4.000 seguidores</strong>.</li>
+              <li>Optimización SEO que aumentó el <strong>alcance orgánico un 40 %</strong>.</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="item">
+          <div class="what">
+            <div class="top"><h3>Técnica de Marketing</h3><p class="when">2024</p></div>
+            <p class="org">ElAyudante</p>
+            <ul class="bullets">
+              <li>Gestión de <strong>más de 50 cuentas de Meta</strong>, con diseño y planificación de contenido.</li>
+              <li>Optimización de contenidos y estrategias SEO.</li>
+              <li>Diseño y creatividad de webs en WordPress.</li>
+              <li>Elaboración y gestión de justificaciones del Kit Digital.</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="item">
+          <div class="what">
+            <div class="top"><h3>Técnica de Marketing y Comunicación</h3><p class="when">2022</p></div>
+            <p class="org">Grupo Pacha</p>
+            <ul class="bullets">
+              <li>Diseño y gestión de webs en Drupal: contenidos actualizados y coherencia visual.</li>
+              <li>Publicación y difusión de eventos en plataformas como Resident Advisor.</li>
+              <li>Redacción de contenido destacado para Diario de Ibiza y Periódico de Ibiza.</li>
+              <li>Fotografía y edición en eventos de artistas internacionales como Solomun y Marco Carola.</li>
+              <li>Proyectos de marketing para la recuperación postpandemia (facturación de <strong>128 M€</strong>).</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="item">
+          <div class="what">
+            <div class="top"><h3>Community Manager</h3><p class="when">2022</p></div>
+            <p class="org">Grupo Irons</p>
+            <ul class="bullets">
+              <li>Creación y ejecución de estrategias de redes sociales.</li>
+              <li>Edición de contenido audiovisual para campañas y redes sociales.</li>
+              <li>Coordinación de ideas y planificación de contenido con el equipo de fotografía.</li>
+              <li>Promoción de eventos a través de redes sociales y acciones de marketing.</li>
+            </ul>
+          </div>
+        </article>
+      </section>
+
+      <section class="sec edu">
+        <h2 class="sec-title"><span class="n">02</span> Formación académica</h2>
+
+        <article class="item">
+          <div class="what">
+            <div class="top"><h3>Doble Grado en Publicidad, Relaciones Públicas y Marketing + Periodismo y Redes Sociales</h3><p class="when">2019 — 2024</p></div>
+            <p class="org">Cesine Centro Universitario <span class="place">· Santander</span></p>
+          </div>
+        </article>
+
+        <p class="subhead">Movilidad internacional · Erasmus+</p>
+
+        <article class="item">
+          <div class="what">
+            <div class="top"><h3>Audencia SciencesCom Programme</h3><p class="when">Ago — Dic 2021</p></div>
+            <p class="org">Audencia Business School <span class="place">· Nantes, Francia</span></p>
+          </div>
+        </article>
+
+        <article class="item">
+          <div class="what">
+            <div class="top"><h3>Exchange Promotion Program in Media</h3><p class="when">Mar — Jun 2021</p></div>
+            <p class="org">Sejong University <span class="place">· Seúl, Corea del Sur</span></p>
+            <p>Communication Department</p>
+          </div>
+        </article>
+      </section>
+    </div>
+
+    <aside class="side">
+      <section class="sec">
+        <h2 class="sec-title"><span class="n">03</span> Herramientas</h2>
+        <ul class="skills">
+          <li><span class="lbl">Campañas y analítica</span>
+            <span class="chips"><span>Meta Ads</span><span>Google Analytics</span><span>SEO</span></span></li>
+          <li><span class="lbl">Email y contenido</span>
+            <span class="chips"><span>Mailchimp</span><span>Copywriting de marca</span></span></li>
+          <li><span class="lbl">Web</span>
+            <span class="chips"><span>WordPress</span><span>Drupal</span></span></li>
+          <li><span class="lbl">Diseño</span>
+            <span class="chips"><span>Canva</span><span>GIMP</span></span></li>
+          <li><span class="lbl">Vídeo y audio</span>
+            <span class="chips"><span>DaVinci Resolve</span><span>CapCut</span><span>Audacity</span></span></li>
+        </ul>
+      </section>
+
+      <section class="sec">
+        <h2 class="sec-title"><span class="n">04</span> Competencias</h2>
+        <ul class="plain">
+          <li>Adaptación y aprendizaje rápido</li>
+          <li>Pensamiento analítico</li>
+          <li>Creatividad y storytelling</li>
+          <li>Comunicación e inteligencia emocional</li>
+          <li>Atención al detalle y visión estratégica</li>
+        </ul>
+      </section>
+
+      <section class="sec">
+        <h2 class="sec-title"><span class="n">05</span> Idiomas</h2>
+        <ul class="lang">
+          <li><b>Español</b><span class="lvl">Nativo</span></li>
+          <li><b>Inglés</b><span class="lvl">B2</span>
+            <p>Cambridge First Certificate in English</p></li>
+        </ul>
+      </section>
+
+      <section class="sec">
+        <h2 class="sec-title"><span class="n">06</span> Cursos</h2>
+        <div class="course">
+          <b>Facebook &amp; Instagram Ads</b>
+          <p>Instituto Marketing · 32 h</p>
+        </div>
+      </section>
+
+      <a class="portfolio" href="https://12helloirene.wixsite.com/misitio">
+        <img src="qr-portfolio.svg" alt="Código QR al portfolio">
+        <div>
+          <b>Entra a mi portfolio</b>
+          <span>12helloirene.<br>wixsite.com/misitio</span>
+        </div>
+      </a>
+    </aside>
+  </div>
+
+</main>
+</body>
+</html>

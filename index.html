@@ -1,0 +1,542 @@
+<!doctype html>
+<html lang="es" data-theme="light">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Irene Cuesta — Especialista en marketing digital</title>
+  <meta name="description" content="Portfolio de Irene Cuesta, especialista en marketing digital: estrategia de social media, campañas de Meta Ads, SEO, contenido, diseño y fotografía con mucha personalidad.">
+  <meta name="color-scheme" content="light dark">
+
+  <!-- Tema aplicado antes del primer pintado para evitar parpadeos -->
+  <script>
+    (function () {
+      var d = document.documentElement, t = null;
+      d.className += ' js';
+      try { t = localStorage.getItem('ic-theme'); } catch (e) {}
+      if (t !== 'light' && t !== 'dark') {
+        t = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+      }
+      d.setAttribute('data-theme', t);
+    })();
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Saltar al contenido</a>
+
+  <!-- ============ HEADER ============ -->
+  <header class="site-header" id="top">
+    <div class="container header-inner">
+      <a class="logo" href="#top" aria-label="Irene Cuesta, inicio">Irene Cuesta<span class="logo__mark" aria-hidden="true">®</span></a>
+
+      <nav class="main-nav" id="main-nav" aria-label="Principal">
+        <ul class="main-nav__list">
+          <li><a class="link-u" href="#trabajos"><span data-i18n="nav.work">Trabajos</span><sup class="mono">08</sup></a></li>
+          <li><a class="link-u" href="#servicios" data-i18n="nav.services">Servicios</a></li>
+          <li><a class="link-u" href="#sobre-mi" data-i18n="nav.about">Sobre mí</a></li>
+          <li><a class="link-u" href="#experiencia" data-i18n="nav.experience">Experiencia</a></li>
+          <li><a class="link-u" href="#contacto" data-i18n="nav.contact">¿Hablamos?</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-tools">
+        <button class="tool-btn lang-btn mono" type="button" id="lang-toggle" aria-label="Cambiar idioma / Change language">
+          <span data-lang="es">ES</span><span class="lang-btn__sep" aria-hidden="true">/</span><span data-lang="en">EN</span>
+        </button>
+        <button class="tool-btn theme-btn" type="button" id="theme-toggle" aria-label="Cambiar entre modo claro y oscuro">
+          <svg class="icon-moon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.5 14.2A8.5 8.5 0 0 1 9.8 3.5a8.5 8.5 0 1 0 10.7 10.7Z"/></svg>
+          <svg class="icon-sun" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+        </button>
+        <button class="tool-btn burger" type="button" id="nav-toggle" aria-controls="main-nav" aria-expanded="false" aria-label="Abrir menú">
+          <span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <!-- ============ HERO ============ -->
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="container">
+        <div class="hero__meta grid mono">
+          <p class="hero__meta-a reveal">(Portfolio — 2026)</p>
+          <p class="hero__meta-b reveal"><span data-i18n="hero.role">Especialista en marketing digital</span> — <span data-i18n="hero.place">Gijón, Asturias</span></p>
+          <p class="hero__meta-c reveal"><span data-i18n="hero.time">Hora local</span> <time id="local-time">--:--</time></p>
+        </div>
+
+        <h1 class="hero__title" id="hero-title">
+          <span class="hero__line"><span class="hero__word">Irene</span></span>
+          <span class="hero__line"><span class="hero__word">Cuesta<span class="hero__dot">.</span></span></span>
+        </h1>
+
+        <div class="hero__bottom grid">
+          <!-- Foto provisional en baja resolución (339×419): pedir a Irene una versión más grande -->
+          <figure class="hero__portrait reveal">
+            <div class="hero__photo">
+              <img src="img/irene-cuesta.png" width="339" height="419" alt="Irene Cuesta sonriendo">
+              <ul class="hero__tags mono" aria-label="Especialidades">
+                <li>Social media</li>
+                <li>Meta Ads</li>
+                <li>SEO</li>
+                <li>Contenido</li>
+              </ul>
+            </div>
+          </figure>
+          <div class="hero__copy reveal">
+            <p class="hero__status mono"><span class="status-dot" aria-hidden="true"></span><span data-i18n="hero.status">Disponible para proyectos · Oct 2026</span></p>
+            <p class="hero__lead" data-i18n="hero.lead">Te doy la bienvenida a mi archivo dedicado al marketing digital, las redes sociales y el arte de comunicar con mucha personalidad.</p>
+            <div class="hero__ctas">
+              <a class="btn btn--solid" href="#trabajos"><span data-i18n="hero.ctaWork">Ver trabajos</span> <span aria-hidden="true">↓</span></a>
+              <a class="btn btn--ghost" href="#contacto"><span data-i18n="hero.ctaContact">¿Hablamos?</span> <span aria-hidden="true">→</span></a>
+            </div>
+            <p class="hero__location mono" data-i18n="hero.location">Gijón · Disponible en remoto</p>
+          </div>
+        </div>
+
+        <dl class="kpis">
+          <div class="kpi reveal">
+            <dt class="mono" data-i18n="kpi.followers">Seguidores con redes y Meta Ads</dt>
+            <dd data-count="4000" data-prefix="+" data-suffix="" data-sep=".">+4.000</dd>
+          </div>
+          <div class="kpi reveal">
+            <dt class="mono" data-i18n="kpi.seo">Alcance orgánico gracias al SEO</dt>
+            <dd data-count="40" data-prefix="+" data-suffix=" %">+40 %</dd>
+          </div>
+          <div class="kpi reveal">
+            <dt class="mono" data-i18n="kpi.meta">Cuentas de Meta gestionadas</dt>
+            <dd data-count="50" data-prefix="" data-suffix="+">50+</dd>
+          </div>
+          <div class="kpi reveal">
+            <dt class="mono" data-i18n="kpi.views">Reproducciones en Instagram · Janel Cuesta</dt>
+            <dd data-count="296" data-prefix="" data-suffix="K+">296K+</dd>
+          </div>
+        </dl>
+      </div>
+    </section>
+
+    <!-- ============ TRABAJOS ============ -->
+    <section class="section work" id="trabajos" aria-labelledby="work-title">
+      <div class="container">
+        <header class="section-head grid">
+          <p class="section-head__label mono reveal">(01)</p>
+          <h2 class="section-head__title reveal" id="work-title"><span data-i18n="work.title">trabajos</span><span class="dot">.</span></h2>
+          <p class="section-head__desc reveal" data-i18n="work.desc">Donde la estrategia se fusiona con la creatividad.</p>
+        </header>
+
+        <div class="work__toolbar reveal">
+          <div class="filters" role="group" aria-label="Filtrar por categoría">
+            <button class="chip mono is-active" type="button" data-filter="all" aria-pressed="true" data-i18n="filter.all">Todos</button>
+            <button class="chip mono" type="button" data-filter="estrategia" aria-pressed="false" data-i18n="filter.estrategia">Estrategia digital</button>
+            <button class="chip mono" type="button" data-filter="feed" aria-pressed="false" data-i18n="filter.feed">Feed y diseño</button>
+            <button class="chip mono" type="button" data-filter="branding" aria-pressed="false" data-i18n="filter.branding">Branding</button>
+            <button class="chip mono" type="button" data-filter="foto" aria-pressed="false" data-i18n="filter.foto">Fotografía</button>
+          </div>
+          <p class="work__count mono" aria-live="polite"><span id="work-count">08</span> / 08</p>
+        </div>
+
+        <!--
+          IMÁGENES PROVISIONALES: las fotos de picsum.photos son marcadores de posición.
+          Sustituir por los trabajos reales de Irene (formato 4:3, p. ej. 1200×900).
+          Cambiar el atributo data-img de cada <li> y el src de su <img>.
+        -->
+        <ul class="work-list" id="work-list">
+          <li class="work-row reveal" id="p-janel" data-category="estrategia" data-img="https://picsum.photos/seed/ic-janel/1200/900">
+            <a class="work-row__link" href="#p-janel">
+              <figure class="work-row__media"><img src="https://picsum.photos/seed/ic-janel/1200/900" width="1200" height="900" loading="lazy" alt="Janel Cuesta: piezas de la estrategia digital en redes sociales"></figure>
+              <span class="work-row__num mono">01</span>
+              <span class="work-row__main">
+                <span class="work-row__title">Janel Cuesta</span>
+                <span class="work-row__desc">Estrategia digital integral para una empresa del sector metalúrgico: redes sociales, SEO, email marketing, web corporativa y tienda online.</span>
+              </span>
+              <span class="work-row__cat mono">Estrategia digital</span>
+              <span class="work-row__year mono">296K views <span class="work-row__arrow" aria-hidden="true">↗</span></span>
+            </a>
+          </li>
+          <li class="work-row reveal" id="p-mimi" data-category="branding" data-img="https://picsum.photos/seed/ic-mimi/1200/900">
+            <a class="work-row__link" href="#p-mimi">
+              <figure class="work-row__media"><img src="https://picsum.photos/seed/ic-mimi/1200/900" width="1200" height="900" loading="lazy" alt="MIMI: logotipo, tarjetas y pegatinas de la marca de bisutería"></figure>
+              <span class="work-row__num mono">02</span>
+              <span class="work-row__main">
+                <span class="work-row__title">MIMI</span>
+                <span class="work-row__desc">Identidad visual para una marca de bisutería: logotipo, tarjetas, pegatinas y gestión de Instagram, Facebook y TikTok.</span>
+              </span>
+              <span class="work-row__cat mono">Branding</span>
+              <span class="work-row__year mono">Logo + RRSS <span class="work-row__arrow" aria-hidden="true">↗</span></span>
+            </a>
+          </li>
+          <li class="work-row reveal" id="p-fontcal" data-category="feed" data-img="https://picsum.photos/seed/ic-fontcal/1200/900">
+            <a class="work-row__link" href="#p-fontcal">
+              <figure class="work-row__media"><img src="https://picsum.photos/seed/ic-fontcal/1200/900" width="1200" height="900" loading="lazy" alt="Fontcal Fontanería: creatividades para el feed de Instagram"></figure>
+              <span class="work-row__num mono">03</span>
+              <span class="work-row__main">
+                <span class="work-row__title">Fontcal Fontanería</span>
+                <span class="work-row__desc">Darse a conocer en Instagram de forma sencilla y directa, mostrando sus servicios con su imagen de marca.</span>
+              </span>
+              <span class="work-row__cat mono">Feed y diseño</span>
+              <span class="work-row__year mono">9 posts · 3 stories <span class="work-row__arrow" aria-hidden="true">↗</span></span>
+            </a>
+          </li>
+          <li class="work-row reveal" id="p-sainz" data-category="feed" data-img="https://picsum.photos/seed/ic-sainz/1200/900">
+            <a class="work-row__link" href="#p-sainz">
+              <figure class="work-row__media"><img src="https://picsum.photos/seed/ic-sainz/1200/900" width="1200" height="900" loading="lazy" alt="Sainz Fisioterapia: publicaciones educativas para Instagram"></figure>
+              <span class="work-row__num mono">04</span>
+              <span class="work-row__main">
+                <span class="work-row__title">Sainz Fisioterapia</span>
+                <span class="work-row__desc">Contenido educativo que da a conocer la trayectoria de la clínica mientras construye una comunidad interesada en sus servicios.</span>
+              </span>
+              <span class="work-row__cat mono">Feed y diseño</span>
+              <span class="work-row__year mono">Contenido <span class="work-row__arrow" aria-hidden="true">↗</span></span>
+            </a>
+          </li>
+          <li class="work-row reveal" id="p-trofeos" data-category="feed" data-img="https://picsum.photos/seed/ic-trofeos/1200/900">
+            <a class="work-row__link" href="#p-trofeos">
+              <figure class="work-row__media"><img src="https://picsum.photos/seed/ic-trofeos/1200/900" width="1200" height="900" loading="lazy" alt="Trofeos Sport: nuevo feed de Instagram con sus productos"></figure>
+              <span class="work-row__num mono">05</span>
+              <span class="work-row__main">
+                <span class="work-row__title">Trofeos Sport</span>
+                <span class="work-row__desc">Reorganizar el feed para hacerlo más atractivo y promocionar los productos de forma clara y coherente con la marca.</span>
+              </span>
+              <span class="work-row__cat mono">Feed y diseño</span>
+              <span class="work-row__year mono">9 posts · 3 stories <span class="work-row__arrow" aria-hidden="true">↗</span></span>
+            </a>
+          </li>
+          <li class="work-row reveal" id="p-audionica" data-category="feed" data-img="https://picsum.photos/seed/ic-audionica/1200/900">
+            <a class="work-row__link" href="#p-audionica">
+              <figure class="work-row__media"><img src="https://picsum.photos/seed/ic-audionica/1200/900" width="1200" height="900" loading="lazy" alt="Audiónica: reestructuración del feed de Instagram"></figure>
+              <span class="work-row__num mono">06</span>
+              <span class="work-row__main">
+                <span class="work-row__title">Audiónica</span>
+                <span class="work-row__desc">Reestructuración del feed para mejorar su apariencia visual y crear una experiencia más atractiva y coherente.</span>
+              </span>
+              <span class="work-row__cat mono">Feed y diseño</span>
+              <span class="work-row__year mono">Rediseño feed <span class="work-row__arrow" aria-hidden="true">↗</span></span>
+            </a>
+          </li>
+          <li class="work-row reveal" id="p-esencia" data-category="foto" data-img="https://picsum.photos/seed/ic-esencia/1200/900">
+            <a class="work-row__link" href="#p-esencia">
+              <figure class="work-row__media"><img src="https://picsum.photos/seed/ic-esencia/1200/900" width="1200" height="900" loading="lazy" alt="La Esencia: fotografía de la primera colección de MIMI"></figure>
+              <span class="work-row__num mono">07</span>
+              <span class="work-row__main">
+                <span class="work-row__title">MIMI · La Esencia</span>
+                <span class="work-row__desc">Fotografía para el lanzamiento de la primera colección: destacar la personalidad de la marca e inspirar a su público a ser fiel a sí mismo.</span>
+              </span>
+              <span class="work-row__cat mono">Fotografía</span>
+              <span class="work-row__year mono">Lanzamiento <span class="work-row__arrow" aria-hidden="true">↗</span></span>
+            </a>
+          </li>
+          <li class="work-row reveal" id="p-yoteLoCuento" data-category="foto" data-img="https://picsum.photos/seed/ic-yoteLoCuento/1200/900">
+            <a class="work-row__link" href="#p-yoteLoCuento">
+              <figure class="work-row__media"><img src="https://picsum.photos/seed/ic-yoteLoCuento/1200/900" width="1200" height="900" loading="lazy" alt="Yo te lo cuento: web de fotografía documental"></figure>
+              <span class="work-row__num mono">08</span>
+              <span class="work-row__main">
+                <span class="work-row__title">Yo te lo cuento</span>
+                <span class="work-row__desc">Web de fotografía documental con mis fotografías y entrevistas a Daniel Ochoa de Olza y José Colón.</span>
+              </span>
+              <span class="work-row__cat mono">Fotografía</span>
+              <span class="work-row__year mono">Web + entrevistas <span class="work-row__arrow" aria-hidden="true">↗</span></span>
+            </a>
+          </li>
+        </ul>
+        <p class="work__empty mono" id="work-empty" hidden>No hay proyectos en esta categoría todavía.</p>
+      </div>
+    </section>
+
+    <!-- ============ SERVICIOS ============ -->
+    <section class="section services" id="servicios" aria-labelledby="services-title">
+      <div class="container">
+        <header class="section-head grid">
+          <p class="section-head__label mono reveal">(02)</p>
+          <h2 class="section-head__title reveal" id="services-title"><span data-i18n="services.title">lo que hago</span><span class="dot">.</span></h2>
+          <p class="section-head__desc reveal" data-i18n="services.desc">Lo que más disfruto hacer: estrategia, redes, diseño y mucha creatividad.</p>
+        </header>
+        <ol class="service-list">
+          <li class="service reveal">
+            <span class="service__num mono">01</span>
+            <h3 class="service__name">Estrategia de marketing digital</h3>
+            <p class="service__desc">Estrategias digitales personalizadas que dan forma a la identidad digital de la marca, hacen que el mensaje llegue a su gente y convierten resultados en ventas reales.</p>
+          </li>
+          <li class="service reveal">
+            <span class="service__num mono">02</span>
+            <h3 class="service__name">Gestión de redes sociales</h3>
+            <p class="service__desc">Instagram, TikTok y Facebook: contenido orgánico, campañas en Meta y una comunidad sólida que no deja de crecer.</p>
+          </li>
+          <li class="service reveal">
+            <span class="service__num mono">03</span>
+            <h3 class="service__name">Feed y diseño de creatividades</h3>
+            <p class="service__desc">Creatividades que llaman la atención desde el primer vistazo, con armonía y claridad visual, adaptadas a cada plataforma.</p>
+          </li>
+          <li class="service reveal">
+            <span class="service__num mono">04</span>
+            <h3 class="service__name">Branding e identidad visual</h3>
+            <p class="service__desc">Logotipo, tipografía, color y piezas gráficas con una estética coherente en todos los puntos de contacto de la marca.</p>
+          </li>
+          <li class="service reveal">
+            <span class="service__num mono">05</span>
+            <h3 class="service__name">Fotografía y edición de vídeo</h3>
+            <p class="service__desc">Probablemente la parte más divertida: transformar mensajes en historias visuales que conectan, originales, bonitas de ver y alineadas con la esencia.</p>
+          </li>
+          <li class="service reveal">
+            <span class="service__num mono">06</span>
+            <h3 class="service__name">SEO, email marketing y web</h3>
+            <p class="service__desc">Posicionamiento, campañas de email y diseño de web corporativa o tienda online como parte de una estrategia integral.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ============ SOBRE MÍ ============ -->
+    <section class="section about" id="sobre-mi" aria-labelledby="about-title">
+      <div class="container">
+        <header class="section-head grid">
+          <p class="section-head__label mono reveal">(03)</p>
+          <h2 class="section-head__title reveal" id="about-title"><span data-i18n="about.title">sobre mí</span><span class="dot">.</span></h2>
+          <p class="section-head__desc reveal" data-i18n="about.desc">Maniática de la perfección, la organización y de que todo salga tal y como lo habíamos pensado.</p>
+        </header>
+        <div class="about__grid grid">
+          <!-- RETRATO PROVISIONAL: sustituir por otra foto real de Irene (4:5, p. ej. 900×1125) -->
+          <figure class="about__portrait reveal">
+            <img src="https://picsum.photos/seed/ic-retrato/900/1125" width="900" height="1125" loading="lazy" alt="Irene Cuesta trabajando">
+            <figcaption class="mono">Irene Cuesta — Gijón, Asturias</figcaption>
+          </figure>
+          <div class="about__text">
+            <p class="about__intro reveal">Especialista en marketing digital con experiencia en <mark>estrategia de social media, campañas de Meta Ads, SEO y marketing de contenidos</mark>. Combino creatividad, análisis de datos y optimización de resultados.</p>
+            <p class="reveal">Nací en 2001 en Gijón, Asturias. Desde pequeña he sido una persona tranquila, siempre atraída por el dibujo, las manualidades y cualquier forma de expresión creativa donde la imaginación tuviera espacio.</p>
+            <p class="reveal">Estudié Publicidad y Periodismo, dos disciplinas distintas pero muy complementarias que me han dado una mirada más completa sobre la comunicación: contar historias, entender los mensajes desde diferentes ángulos y adaptarlos a distintos formatos y públicos.</p>
+            <p class="reveal">Afronto el futuro con ambición y muchas ganas de seguir creciendo, sobre todo en performance marketing, inteligencia artificial y marketing de contenidos. Me ilusiona participar en nuevos proyectos y enfrentarme a nuevos retos.</p>
+
+            <div class="about__skills reveal">
+              <h3 class="mono about__skills-title" data-i18n="about.skills">Competencias</h3>
+              <ul class="tags">
+                <li>Adaptación y aprendizaje rápido</li>
+                <li>Pensamiento analítico</li>
+                <li>Creatividad y storytelling</li>
+                <li>Comunicación e inteligencia emocional</li>
+                <li>Atención al detalle</li>
+                <li>Visión estratégica</li>
+              </ul>
+            </div>
+
+            <div class="reveal">
+              <a class="btn btn--ghost" href="cv/Irene-Cuesta-CV.pdf" target="_blank" rel="noopener"><span data-i18n="about.cv">Ver mi CV</span> <span aria-hidden="true">↗</span></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ EXPERIENCIA ============ -->
+    <section class="section experience" id="experiencia" aria-labelledby="exp-title">
+      <div class="container">
+        <header class="section-head grid">
+          <p class="section-head__label mono reveal">(04)</p>
+          <h2 class="section-head__title reveal" id="exp-title"><span data-i18n="exp.title">experiencia</span><span class="dot">.</span></h2>
+          <p class="section-head__desc reveal" data-i18n="exp.desc">Cada etapa ha dado forma a mi manera de entender el marketing digital.</p>
+        </header>
+
+        <div class="exp__grid grid">
+          <div class="exp__work">
+            <h3 class="mono exp__heading reveal" data-i18n="exp.work">Experiencia profesional</h3>
+            <ol class="timeline">
+              <li class="timeline__item reveal">
+                <p class="timeline__date mono">2024 — 2026</p>
+                <h4 class="timeline__role">Responsable de Marketing Digital</h4>
+                <p class="timeline__org">JC Innovación</p>
+                <ul class="timeline__points">
+                  <li>Creación y ejecución de la estrategia de marketing digital.</li>
+                  <li>Redes sociales y campañas de Meta Ads: <strong>+4.000 seguidores</strong>.</li>
+                  <li>Optimización SEO que aumentó el <strong>alcance orgánico un 40 %</strong>.</li>
+                </ul>
+              </li>
+              <li class="timeline__item reveal">
+                <p class="timeline__date mono">2024</p>
+                <h4 class="timeline__role">Técnica de Marketing</h4>
+                <p class="timeline__org">ElAyudante</p>
+                <ul class="timeline__points">
+                  <li>Gestión de <strong>más de 50 cuentas de Meta</strong>, con diseño y planificación de contenido.</li>
+                  <li>Optimización de contenidos y estrategias SEO.</li>
+                  <li>Diseño y creatividad de webs en WordPress.</li>
+                  <li>Elaboración y gestión de justificaciones del Kit Digital.</li>
+                </ul>
+              </li>
+              <li class="timeline__item reveal">
+                <p class="timeline__date mono">2022</p>
+                <h4 class="timeline__role">Técnica de Marketing y Comunicación</h4>
+                <p class="timeline__org">Grupo Pacha</p>
+                <ul class="timeline__points">
+                  <li>Diseño y gestión de webs en Drupal y difusión de eventos en Resident Advisor.</li>
+                  <li>Redacción de contenido para Diario de Ibiza y Periódico de Ibiza.</li>
+                  <li>Fotografía y edición en eventos de artistas como Solomun y Marco Carola.</li>
+                  <li>Proyectos de marketing para la recuperación postpandemia.</li>
+                </ul>
+              </li>
+              <li class="timeline__item reveal">
+                <p class="timeline__date mono">2022</p>
+                <h4 class="timeline__role">Community Manager</h4>
+                <p class="timeline__org">Grupo Irons</p>
+                <ul class="timeline__points">
+                  <li>Creación y ejecución de estrategias de redes sociales.</li>
+                  <li>Edición de contenido audiovisual para campañas y redes.</li>
+                  <li>Planificación de contenido con el equipo de fotografía.</li>
+                  <li>Promoción de eventos en redes sociales.</li>
+                </ul>
+              </li>
+            </ol>
+          </div>
+
+          <div class="exp__edu">
+            <h3 class="mono exp__heading reveal" data-i18n="exp.edu">Formación</h3>
+            <ol class="timeline">
+              <li class="timeline__item reveal">
+                <p class="timeline__date mono">2019 — 2024</p>
+                <h4 class="timeline__role">Doble Grado en Publicidad, RR. PP. y Marketing + Periodismo y Redes Sociales</h4>
+                <p class="timeline__org">Cesine Centro Universitario · Santander</p>
+              </li>
+              <li class="timeline__item reveal">
+                <p class="timeline__date mono">Ago — Dic 2021</p>
+                <h4 class="timeline__role">Erasmus+ · Audencia SciencesCom Programme</h4>
+                <p class="timeline__org">Audencia Business School · Nantes, Francia</p>
+              </li>
+              <li class="timeline__item reveal">
+                <p class="timeline__date mono">Mar — Jun 2021</p>
+                <h4 class="timeline__role">Exchange Promotion Program in Media</h4>
+                <p class="timeline__org">Sejong University · Seúl, Corea del Sur</p>
+              </li>
+            </ol>
+
+            <h3 class="mono exp__heading exp__heading--spaced reveal" data-i18n="exp.extra">Idiomas y cursos</h3>
+            <ul class="facts reveal">
+              <li><span class="mono facts__year" data-i18n="exp.native">Nativo</span><span data-i18n="exp.spanish">Español</span></li>
+              <li><span class="mono facts__year">B2</span><span data-i18n="exp.english">Inglés · Cambridge First Certificate</span></li>
+              <li><span class="mono facts__year">32 h</span><span>Facebook &amp; Instagram Ads · Instituto Marketing</span></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ HERRAMIENTAS ============ -->
+    <section class="section tools" id="herramientas" aria-labelledby="tools-title">
+      <div class="container">
+        <header class="section-head grid">
+          <p class="section-head__label mono reveal">(05)</p>
+          <h2 class="section-head__title reveal" id="tools-title"><span data-i18n="tools.title">herramientas</span><span class="dot">.</span></h2>
+          <p class="section-head__desc reveal" data-i18n="tools.desc">Con lo que planifico, creo, mido y optimizo cada campaña.</p>
+        </header>
+        <div class="tools-grid reveal">
+          <div class="tool-group">
+            <h3 class="tool-group__title mono" data-i18n="tools.ads">Campañas y analítica</h3>
+            <ul class="tool-group__list"><li>Meta Ads</li><li>Google Analytics</li><li>SEO</li></ul>
+          </div>
+          <div class="tool-group">
+            <h3 class="tool-group__title mono" data-i18n="tools.email">Email y contenido</h3>
+            <ul class="tool-group__list"><li>Mailchimp</li><li data-i18n="tools.copy">Copywriting de marca</li></ul>
+          </div>
+          <div class="tool-group">
+            <h3 class="tool-group__title mono">Web</h3>
+            <ul class="tool-group__list"><li>WordPress</li><li>Drupal</li></ul>
+          </div>
+          <div class="tool-group">
+            <h3 class="tool-group__title mono" data-i18n="tools.design">Diseño</h3>
+            <ul class="tool-group__list"><li>Canva</li><li>GIMP</li></ul>
+          </div>
+          <div class="tool-group">
+            <h3 class="tool-group__title mono" data-i18n="tools.video">Vídeo y audio</h3>
+            <ul class="tool-group__list"><li>DaVinci Resolve</li><li>CapCut</li><li>Audacity</li></ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ MARCAS ============ -->
+    <section class="section clients" aria-labelledby="clients-title">
+      <div class="container">
+        <header class="section-head grid">
+          <p class="section-head__label mono reveal">(06)</p>
+          <h2 class="section-head__title reveal" id="clients-title"><span data-i18n="clients.title">marcas</span><span class="dot">.</span></h2>
+          <p class="section-head__desc reveal" data-i18n="clients.desc">Empresas y marcas con las que he trabajado.</p>
+        </header>
+        <!-- Nombres en texto: sustituir por logotipos monocromos cuando estén disponibles -->
+        <ul class="client-grid reveal">
+          <li class="client client--1">JC INNOVACIÓN</li>
+          <li class="client client--5">ElAyudante</li>
+          <li class="client client--3">Grupo Pacha</li>
+          <li class="client client--4">GRUPO IRONS</li>
+          <li class="client client--6">Janel Cuesta</li>
+          <li class="client client--3">MIMI</li>
+          <li class="client client--2">fontcal fontanería</li>
+          <li class="client client--5">Sainz Fisioterapia</li>
+          <li class="client client--4">TROFEOS SPORT</li>
+          <li class="client client--6">Audiónica</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ============ CONTACTO ============ -->
+    <section class="section contact" id="contacto" aria-labelledby="contact-title">
+      <div class="container">
+        <header class="section-head grid">
+          <p class="section-head__label mono reveal">(07)</p>
+          <h2 class="section-head__title reveal" id="contact-title"><span data-i18n="contact.title">¿hablamos</span><span class="dot">?</span></h2>
+          <p class="section-head__desc reveal" data-i18n="contact.desc">¿Trabajamos juntos/as? Podríamos hacer muy buen equipo :)</p>
+        </header>
+
+        <a class="contact__email reveal" href="mailto:irenecuestamartinez@gmail.com"><span>irenecuestamartinez@gmail.com</span></a>
+
+        <div class="contact__grid grid">
+          <div class="contact__side reveal">
+            <p class="contact__lead" data-i18n="contact.lead">Cuéntame qué tienes en mente: una estrategia digital, tus redes sociales, una campaña de Meta Ads, una identidad visual o una sesión de fotos.</p>
+            <ul class="socials">
+              <li><a class="social-link" href="https://www.linkedin.com/in/irenecuestamartinez/" target="_blank" rel="noopener"><span>LinkedIn</span><span class="mono" aria-hidden="true">↗</span></a></li>
+              <li><a class="social-link" href="mailto:irenecuestamartinez@gmail.com"><span>Email</span><span class="mono" aria-hidden="true">↗</span></a></li>
+              <li><a class="social-link" href="cv/Irene-Cuesta-CV.pdf" target="_blank" rel="noopener"><span data-i18n="contact.cv">Mi CV</span><span class="mono" aria-hidden="true">↗</span></a></li>
+            </ul>
+          </div>
+
+          <form class="contact-form reveal" id="contact-form" novalidate>
+            <div class="field">
+              <label class="mono" for="f-name" data-i18n="form.name">Nombre</label>
+              <input id="f-name" name="nombre" type="text" autocomplete="name" required placeholder="Tu nombre y apellido">
+            </div>
+            <div class="field">
+              <label class="mono" for="f-email" data-i18n="form.email">Email</label>
+              <input id="f-email" name="email" type="email" autocomplete="email" required placeholder="tu@email.com">
+            </div>
+            <div class="field">
+              <label class="mono" for="f-subject" data-i18n="form.subject">Asunto</label>
+              <input id="f-subject" name="asunto" type="text" required placeholder="Estrategia digital, redes, branding…">
+            </div>
+            <div class="field">
+              <label class="mono" for="f-msg" data-i18n="form.message">Cuéntame más…</label>
+              <textarea id="f-msg" name="mensaje" rows="5" required placeholder="Háblame de tu marca, tus objetivos y plazos"></textarea>
+            </div>
+            <div class="contact-form__footer">
+              <button class="btn btn--solid" type="submit"><span data-i18n="form.submit">Enviar</span> <span aria-hidden="true">→</span></button>
+              <p class="form-status mono" id="form-status" role="status" aria-live="polite"></p>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p class="mono">© 2026 Irene Cuesta</p>
+      <ul class="footer-links mono">
+        <li><a class="link-u" href="https://www.linkedin.com/in/irenecuestamartinez/" target="_blank" rel="noopener">LinkedIn</a></li>
+        <li><a class="link-u" href="#" data-i18n="footer.legal">Aviso legal</a></li>
+        <li><a class="link-u" href="#" data-i18n="footer.privacy">Privacidad</a></li>
+        <li><a class="link-u" href="#top"><span data-i18n="footer.top">Volver arriba</span> ↑</a></li>
+      </ul>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
